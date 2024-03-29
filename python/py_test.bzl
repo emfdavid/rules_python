@@ -33,6 +33,7 @@ def py_test(**attrs):
     if attrs.get("srcs_version") in ("PY2", "PY2ONLY"):
         fail("Python 2 is no longer supported: https://github.com/bazelbuild/rules_python/issues/886")
 
+    print("SOME TEXT")
     # buildifier: disable=native-python
     _py_test_impl(**add_migration_tag(attrs))
 
